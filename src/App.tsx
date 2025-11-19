@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import {
   Box,
   Container,
@@ -24,8 +24,6 @@ import { Upload, Download, Copy, ArrowRight, Sparkles, Moon, Sun, Github, Code, 
 import { encode, decode } from '@toon-format/toon'
 import Editor from '@monaco-editor/react'
 import { getEncoding } from 'js-tiktoken'
-
-// Removed: MotionBox is not used in current implementation
 
 // Tokenizer instance (using cl100k_base which is used by GPT-4)
 const tokenizer = getEncoding('cl100k_base')
@@ -172,6 +170,7 @@ function App() {
       duration: 1500,
     })
   }
+
 
   // Editor settings for VSCode look
   const editorOptions = {
