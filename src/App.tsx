@@ -388,12 +388,6 @@ function App() {
                <Text>Repository</Text>
              </HStack>
            </Link>
-           <Link href="https://github.com/eveiljuice" isExternal _hover={{ color: 'brand.500' }}>
-             <HStack spacing={1}>
-               <Icon as={Github} size={12} />
-               <Text>@eveiljuice</Text>
-             </HStack>
-           </Link>
            <Text>Created by <Link href="https://t.me/popdevp" isExternal color="brand.500">@popdevp</Link></Text>
         </Flex>
 
