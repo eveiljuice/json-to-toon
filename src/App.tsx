@@ -382,6 +382,12 @@ function App() {
 
         {/* Footer */}
         <Flex justify="center" align="center" py={2} flexShrink={0} gap={6} fontSize="xs" color="gray.500" borderTop="1px solid" borderColor={borderColor}>
+           <Link href="https://github.com/eveiljuice/json-to-toon" isExternal _hover={{ color: 'brand.500' }}>
+             <HStack spacing={1}>
+               <Icon as={Github} size={12} />
+               <Text>Repository</Text>
+             </HStack>
+           </Link>
            <Link href="https://github.com/eveiljuice" isExternal _hover={{ color: 'brand.500' }}>
              <HStack spacing={1}>
                <Icon as={Github} size={12} />
