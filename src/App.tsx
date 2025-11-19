@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import {
   Box,
   Container,
@@ -20,13 +20,12 @@ import {
   Switch,
 } from '@chakra-ui/react'
 import { useDropzone } from 'react-dropzone'
-import { motion } from 'framer-motion'
-import { Upload, Download, Copy, ArrowRight, Trash2, Sparkles, Moon, Sun, Github, Globe, Code, ArrowLeftRight } from 'lucide-react'
+import { Upload, Download, Copy, ArrowRight, Sparkles, Moon, Sun, Github, Code, ArrowLeftRight } from 'lucide-react'
 import { encode, decode } from '@toon-format/toon'
 import Editor from '@monaco-editor/react'
 import { getEncoding } from 'js-tiktoken'
 
-const MotionBox = motion(Box)
+// Removed: MotionBox is not used in current implementation
 
 // Tokenizer instance (using cl100k_base which is used by GPT-4)
 const tokenizer = getEncoding('cl100k_base')
@@ -174,22 +173,16 @@ function App() {
     })
   }
 
-  const handleClear = () => {
-    setJsonInput('')
-    setToonOutput('')
-    setFileName(null)
-  }
-
   // Editor settings for VSCode look
   const editorOptions = {
     minimap: { enabled: false },
     fontSize: 14,
     fontFamily: "'JetBrains Mono', 'Fira Code', Consolas, monospace",
-    lineNumbers: 'on',
+    lineNumbers: 'on' as const,
     scrollBeyondLastLine: false,
     roundedSelection: false,
     padding: { top: 16, bottom: 16 },
-    cursorStyle: 'line',
+    cursorStyle: 'line' as const,
     automaticLayout: true,
     theme: editorTheme,
   }
