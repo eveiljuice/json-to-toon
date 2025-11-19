@@ -1,0 +1,30 @@
+{
+  "name": "convert-json-to-toon",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@monaco-editor/react": "^4.7.0",
+    "@toon-format/toon": "^1.0.0",
+    "framer-motion": "^6.5.1",
+    "js-tiktoken": "^1.0.21",
+    "lucide-react": "^0.554.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-dropzone": "^14.3.8"
+  }
+}

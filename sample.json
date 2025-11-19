@@ -1,0 +1,6 @@
+{
+    "hikes": [
+      { "id": 1, "name": "Blue Lake Trail", "distance": 7.5 },
+      { "id": 2, "name": "Ridge Overlook", "distance": 9.2 }
+    ]
+  }
